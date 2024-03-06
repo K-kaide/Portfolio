@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const profilePic = document.getElementById("profile-pic");
+  const imagePaths = [
+    "./assets/image.jpg",
+    "./assets/me-1_edited.jpg",
+    "./assets/me-3_edited.jpg",
+    "./assets/me-4.jpg",
+    "./assets/me-2_edited.jpg",
+  ]; // Add paths to your images
+
+  let currentIndex = 0;
+
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % imagePaths.length;
+    profilePic.src = imagePaths[currentIndex];
+  }, 2000); // Change image every 2 seconds
+});
+
 const typingTexts = [
   "Hi there!",
   "The Name's Jem💎",
